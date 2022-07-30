@@ -113,24 +113,11 @@ function registerButtonHandlers() {
             window.alert('Error getting profile: ' + error);
         });
     });
-    
-
-    
-    
-    
-    
+   
 }
 
-/**
-* Alert the user if LIFF is opened in an external browser and unavailable buttons are tapped
-*/
 
-/**
-* Toggle access token data field
-*/
-function toggleAccessToken() {
-    toggleElement('accessTokenData');
-}
+
 
 /**
 * Toggle profile info field
@@ -139,17 +126,9 @@ function toggleProfileData() {
     toggleElement('profileInfo');
 }
 
-/**
-* Toggle scanCode result field
-*/
-function toggleQrCodeReader() {
-    toggleElement('scanQr');
-}
 
-/**
-* Toggle specified element
-* @param {string} elementId The ID of the selected element
-*/
+
+
 function toggleElement(elementId) {
     const elem = document.getElementById(elementId);
     if (elem.offsetWidth > 0 && elem.offsetHeight > 0) {
