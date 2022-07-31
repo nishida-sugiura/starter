@@ -133,6 +133,14 @@ function registerButtonHandlers() {
             document.getElementById('userIdProfileField').textContent = profile.userId;
             document.getElementById('displayNameField').textContent = profile.displayName;
 
+            
+            
+           let uid=  profile.userId;
+            
+            
+            
+            
+            
             const profilePictureDiv = document.getElementById('profilePictureDiv');
             if (profilePictureDiv.firstElementChild) {
                 profilePictureDiv.removeChild(profilePictureDiv.firstElementChild);
