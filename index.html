@@ -5,7 +5,26 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>LIFF Starter</title>
         <link rel="stylesheet" href="style.css">
+        
+        
+ <script>
+      
+   liff.getProfile()
+  .then((profile) => {
+    const dsp_name = profile.displayName;
+    const uid = profile.userId;
+  })
+  .catch((err) => {
+    console.log("error", err);
+  });
+      
+        
+  </script>
+        
     </head>
+    
+    
+    
     <body>
         <div id="liffAppContent">
             <!-- ACTION BUTTONS -->
@@ -177,10 +196,11 @@
         
         
         
-  <script>
+
       
       
       
+  <script>   
       
       
       
