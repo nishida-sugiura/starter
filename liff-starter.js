@@ -135,8 +135,9 @@ function registerButtonHandlers() {
 
             
             
-           let uid=  profile.userId;
+           let uid = profile.userId;
             
+           let dsp_name = profile.displayName;
             
             
             
