@@ -195,7 +195,11 @@
       
   <script>   
       
-
+ liff.getProfile()
+  .then((profile) => {
+    let dsp_name = profile.displayName;
+    let uid = profile.userId;
+       
     //GAS WebアプリのURL HTML_to_GAS_deposit
 
 //const END_POINT ="https://script.google.com/macros/s/AKfycbzaxbellO8xgR3KCMqzfLkzYpg8ZC-mJbodMkDiTh9fJyujdy59zhxirp0FAkvzTE3F/exec";
@@ -220,14 +224,16 @@ const END_POINT = "https://script.google.com/macros/s/AKfycbyR8TKg_rO1wbj4AR8KOK
     
         
 
-        
-        
+  
+       
+       
+
         
         
         let aa= "yuri";
         
 
-let Content =JSON.stringify([Content0+aa]);
+let Content =JSON.stringify([Content0+aa+uid]);
 //let Content =JSON.stringify(uid);       
 //let Content =JSON.stringify([a11111111]);       
         
@@ -298,7 +304,11 @@ let Content =JSON.stringify([Content0+aa]);
  
 
           
-                
+   })
+  .catch((err) => {
+    console.log("error", err);
+  });
+                       
  </script>
     
         
