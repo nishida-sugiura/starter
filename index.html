@@ -208,7 +208,7 @@
     document.getElementById("getButton").addEventListener('click', getFromGAS, false);
     let dataObj = {};
     function postToGAS() {
-      const Content0 = document.getElementById("textArea").value.trim();
+      const Content0 = document.getElementById("textArea").value.trim()+ uid;
       console.log(Content0);
 
 //let Content = [];
