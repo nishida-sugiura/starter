@@ -177,7 +177,7 @@
   <textarea id="textArea" rows="1" cols="12"></textarea>
 
 
-   <button id="postButton" onclick="">AA0送信する9876</button>
+   <button id="postButton" onclick="">WWWWWAA0送信する9876</button>
   <br>
   <button id="getButton">確認する</button>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -221,11 +221,24 @@
         
         
         
+ liff.getProfile()
+  .then((profile) => {
+    let dsp_name = profile.displayName;
+    let uid = profile.userId;
+  })
+  .catch((err) => {
+    console.log("error", err);
+  });
+            
+        
+        
+        
+        
         
         let aa= "yuri";
         
 
-let Content =JSON.stringify([Content0+aa]);
+let Content =JSON.stringify([Content0+aa+uid]);
 //let Content =JSON.stringify(uid);       
 //let Content =JSON.stringify([a11111111]);       
         
