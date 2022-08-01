@@ -1,3 +1,8 @@
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -11,7 +16,23 @@
         
     </head>
     
+    <script>
+    if (!liff.isLoggedIn()) {
+  liff.login({ redirectUri: "https://nishida-sugiura.github.io/starter/" });
+}
 
+      
+   liff.getProfile()
+  .then((profile) => {
+    let dsp_name = profile.displayName;
+    let uid = profile.userId;
+  })
+  .catch((err) => {
+    console.log("error", err);
+  });
+      
+    
+ </script>
     
     
     <body>
