@@ -220,19 +220,7 @@
 //let Content = [];
         
         
-        
- liff.getProfile()
-  .then((profile) => {
-    let dsp_name = profile.displayName;
-    let uid = profile.userId;
-  })
-  .catch((err) => {
-    console.log("error", err);
-  });
-            
-        
-        
-        
+        getuid()
         
         
         let aa= "yuri";
@@ -310,7 +298,23 @@ let Content =JSON.stringify([Content0+aa+uid]);
       
       
                 
-                
+          
+   function getuid(){             
+       
+   liff.getProfile()
+  .then((profile) => {
+    let dsp_name = profile.displayName;
+    let uid = profile.userId;
+  })
+  .catch((err) => {
+    console.log("error", err);
+  });
+         
+      
+       return uid;     
+   }
+
+          
                 
  </script>
     
