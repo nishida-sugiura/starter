@@ -134,8 +134,8 @@ function registerButtonHandlers() {
 
 
 
-let dsp_name = profile.displayName;
-let uid = profile.userID;
+//let dsp_name = profile.displayName;
+//let uid = profile.userID;
 
 
             const profilePictureDiv = document.getElementById('profilePictureDiv');
