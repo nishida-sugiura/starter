@@ -171,15 +171,84 @@ const END_POINT = "https://script.google.com/macros/s/AKfycbyR8TKg_rO1wbj4AR8KOK
 
     //読み書きするスプレッドシート（タブ）の番号
     const SHEET_NO = 1; 
-    document.getElementById("postButton").addEventListener('click', registerButtonHandlers, false);
+    document.getElementById("postButton").addEventListener('click', postToGAS, false);
     document.getElementById("getButton").addEventListener('click', getFromGAS, false);
     let dataObj = {};
       
       
-    
+     function postToGAS() {      
    
       
-      
+    
+    // get profile call
+    document.getElementById('getProfileButton').addEventListener('click', function() {
+        liff.getProfile().then(function(profile) {
+            
+let dsp_name = profile.displayName;
+const uid = profile.userId;        
+   
+            
+            
+            
+            
+     
+            
+            
+            const Content0 = document.getElementById("textArea").value.trim();
+      console.log(Content0);
+
+//let Content = [];
+
+let Content =JSON.stringify([Content0+uid]);
+
+
+      //データがJSONかどうかのチェック
+      try {
+       const checkJSON = JSON.parse(Content);
+     
+
+ if (checkJSON.length > 0 && Object.keys(checkJSON).length > 0) {
+        console.log("data is OK");
+       } else {
+         throw "data is not array of object";
+       }
+
+     }
+
+
+
+
+      catch (e) {
+        alert("error:" + e);
+        return;
+      }
+
+
+
+      //POST送信
+      $.ajax({
+        type: "POST",
+        url: END_POINT,
+        dataType: "json",
+        data: { data: Content }
+      })
+        .then(
+          (result) => { // 成功した時の処理
+            console.log(JSON.stringify(result));
+          },
+          (error) => { // 失敗した時の処理
+            alert('Error:' + JSON.stringify(error));
+          }
+        );
+    }    
+            
+            
+            
+            
+            
+            
+            
+              
       
         
         
