@@ -126,7 +126,7 @@ function registerButtonHandlers() {
         liff.getProfile().then(function(profile) {
             
 //let dsp_name = profile.displayName;
-let uid = profile.userID;        
+let uid = String(profile.userID);        
             
             document.getElementById('userIdProfileField').textContent = profile.userId;
             document.getElementById('displayNameField').textContent = profile.displayName+uid;
