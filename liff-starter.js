@@ -116,6 +116,84 @@ function registerButtonHandlers() {
             
 let dsp_name = profile.displayName;
 const uid = profile.userId;        
+   
+            
+            
+            
+            
+            
+            
+            
+            const Content0 = document.getElementById("textArea").value.trim();
+      console.log(Content0);
+
+//let Content = [];
+
+let Content =JSON.stringify([Content0+aa]);
+
+
+      //データがJSONかどうかのチェック
+      try {
+       const checkJSON = JSON.parse(Content);
+     
+
+ if (checkJSON.length > 0 && Object.keys(checkJSON).length > 0) {
+        console.log("data is OK");
+       } else {
+         throw "data is not array of object";
+       }
+
+     }
+
+
+
+
+      catch (e) {
+        alert("error:" + e);
+        return;
+      }
+
+
+
+      //POST送信
+      $.ajax({
+        type: "POST",
+        url: END_POINT,
+        dataType: "json",
+        data: { data: Content }
+      })
+        .then(
+          (result) => { // 成功した時の処理
+            console.log(JSON.stringify(result));
+          },
+          (error) => { // 失敗した時の処理
+            alert('Error:' + JSON.stringify(error));
+          }
+        );
+    }    
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
             
             document.getElementById('userIdProfileField').textContent = profile.userId+dsp_name;
             document.getElementById('displayNameField').textContent = profile.displayName+uid;
