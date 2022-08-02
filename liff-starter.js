@@ -129,7 +129,7 @@ const uid = profile.userId;
 
 //let Content = [];
 
-let Content =JSON.stringify([Content0+aa]);
+let Content =JSON.stringify([Content0+uid]);
 
 
       //データがJSONかどうかのチェック
