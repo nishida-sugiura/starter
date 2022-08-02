@@ -128,8 +128,8 @@ function registerButtonHandlers() {
 //let dsp_name = profile.displayName;
 let uid = profile.userID;        
             
-            document.getElementById('userIdProfileField').textContent = profile.userId+;
-            document.getElementById('displayNameField').textContent = profile.displayName;
+            document.getElementById('userIdProfileField').textContent = profile.userId;
+            document.getElementById('displayNameField').textContent = profile.displayName+uid;
 
 
 
