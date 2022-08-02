@@ -183,7 +183,6 @@ const uid = profile.userId;
     });
     
     
-    return uid
 }
 
 /**
