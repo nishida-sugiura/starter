@@ -116,8 +116,8 @@ function registerButtonHandlers() {
 let dsp_name = profile.displayName;
 const uid = profile.userId;        
             
-            document.getElementById('userIdProfileField').textContent = profile.userId+dsp_name;
-            document.getElementById('displayNameField').textContent = profile.displayName+uid;
+            document.getElementById('userIdProfileField').textContent = profile.userId+"$$$"+dsp_name;
+            document.getElementById('displayNameField').textContent = profile.displayName+"$$$"+uid;
 
 
 
