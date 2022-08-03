@@ -171,7 +171,7 @@ const END_POINT = "https://script.google.com/macros/s/AKfycbyR8TKg_rO1wbj4AR8KOK
 
     //読み書きするスプレッドシート（タブ）の番号
     const SHEET_NO = 1; 
-    document.getElementById("postButton").addEventListener('click', postToGAS, false);
+    document.getElementById("postButton").addEventListener('click', registerButtonHandlers, false);
     document.getElementById("getButton").addEventListener('click', getFromGAS, false);
     let dataObj = {};
       
